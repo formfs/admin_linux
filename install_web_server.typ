@@ -333,6 +333,8 @@ minutes :
 
 #pagebreak()
 
+#include "securtie.typ"
+
 = Ressources
 
 == Sécurité informatique
