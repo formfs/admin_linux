@@ -18,3 +18,5 @@ echo "Ajout permission sur clef privé ..."
 echo "===================================================="
 
 chmod 600 "$HOME/.ssh/$clef_ssh"
+
+ls -al $HOME/.ssh/

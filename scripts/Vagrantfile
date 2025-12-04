@@ -1,0 +1,49 @@
+# encoding: utf-8
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANT_BOX1 = 'debian/bookworm64'
+VM_NAME = 'monserveur'
+VM_USER = 'marc'
+VM_PORT = 8124
+VM_RAM = 512
+VM_CPUS = 1
+VM_DD = "10GB"
+
+Vagrant.configure(2) do |config|
+
+  # Vagrant box from Hashicorp
+  config.vm.box = VAGRANT_BOX1
+  
+  # Actual machine name
+  config.vm.hostname = VM_NAME
+
+  # Set VM name in Virtualbox
+  config.vm.provider "virtualbox" do |v|
+    v.name = VM_NAME
+    v.memory = VM_RAM
+    v.cpus = VM_CPUS
+  end
+
+   # Specify disk size
+   config.vm.disk :disk, size: VM_DD , primary: true
+
+  #DHCP — comment this out if planning on using NAT instead
+  #config.vm.network "private_network", type: "dhcp"
+
+  # # Port forwarding — uncomment this to use NAT instead of DHCP
+  #config.vm.network "forwarded_port", guest: 80, host: VM_PORT
+
+  # Disable default Vagrant folder, use a unique path per project
+  config.vm.synced_folder '.', '/home/'+VM_USER+'', disabled: true
+
+  # Install Apps
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    apt-get upgrade -y
+    apt-get install -y git vim openssh-server mc tmux curl btop htop
+    curl -LO https://raw.githubusercontent.com/formfs/admin_linux/refs/heads/main/scripts/docker_install.sh
+    apt-get autoremove -y
+    apt-get clean -y
+  SHELL
+end
