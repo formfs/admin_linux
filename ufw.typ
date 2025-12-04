@@ -16,3 +16,4 @@ Le noyau *Linux* fournit un système de filtrage de paquets appelé *netfilter*,
 - Ouvre un port pour un protocole spécifique : `sudo ufw allow 443/tcp` (*HTTPS*)
 - Ouvre le port d'un service : `sudo ufw allow ssh` 
 - Bloque le trafic sur un port spécifique : `sudo ufw deny 25` (*SMTP*)
+- *ufw* a la possibilité de refuser les connexions à partir d'une adresse IP qui a tenté d'initier 6 connexions ou plus au cours des 30 dernières secondes : `sudo ufw limit ssh`
