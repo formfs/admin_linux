@@ -9,7 +9,9 @@ Le noyau *Linux* fournit un système de filtrage de paquets appelé *netfilter*,
 - Activer le *pare-feu* : `sudo ufw enable`
 - Désactiver le *pare-feu* : `sudo ufw disable`
 - Afficher le *statut* (actif/inactif) : `sudo ufw status`
-- Définir la politique par défaut pour bloquer tout trafic entrant (*Recommandé*) : `sudo ufw default deny incoming`
+- Définir la politique par défaut pour bloquer tout trafic entrant (*Recommandé*) : 
+  - `sudo ufw default deny incoming`
+  - `sudo ufw default allow outgoing`
 - Ouvrir un *port* spécifique : `sudo ufw allow 80` (*HTTP*)
 - Ouvre un port pour un protocole spécifique : `sudo ufw allow 443/tcp` (*HTTPS*)
 - Ouvre le port d'un service : `sudo ufw allow ssh` 
