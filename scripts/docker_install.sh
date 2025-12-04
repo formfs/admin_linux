@@ -66,8 +66,6 @@ echo "============================================================"
 sudo usermod -aG docker $USER
 newgrp docker
 
-sleep 2s
-
 echo "============================================================================="
 echo "Verification que docker fonctionne , lancement d'un container Hello world ..."
 echo "docker run --rm hello-world"
