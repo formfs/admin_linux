@@ -313,7 +313,6 @@ Supprimer les sauvegardes datant de plus de 30 jours à l’aide de find :
 
 == Combinaison de commandes pour monitorer sa machine
 
-
 Liste des répertoires qui prennent le plus de place :
 
 `du -ch --max-depth=2 / 2>/dev/null | sort -rh | head -15`
@@ -322,6 +321,10 @@ Liste les derniers fichiers crées ou modifiés dans les dernieres 5
 minutes :
 
 `find / -mmin 5 > liste.txt`
+
+Voir les ports ouverts sur son serveur :
+
+`ss -tulpn`
 
 #pagebreak()
 
