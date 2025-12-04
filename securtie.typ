@@ -7,4 +7,3 @@ Automatiser l'installation des mise à jour de sécurité : \
 
 Valider par *yes* l'installation automatique des mises à jour : \
 `sudo dpkg-reconfigure --priority=low unattended-upgrades`
-
