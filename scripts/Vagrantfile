@@ -32,7 +32,7 @@ Vagrant.configure(2) do |config|
   #config.vm.network "private_network", type: "dhcp"
 
   # # Port forwarding — uncomment this to use NAT instead of DHCP
-  #config.vm.network "forwarded_port", guest: 80, host: VM_PORT
+  config.vm.network "forwarded_port", guest: 80, host: VM_PORT
 
   # Disable default Vagrant folder, use a unique path per project
   config.vm.synced_folder '.', '/home/'+VM_USER+'', disabled: true
