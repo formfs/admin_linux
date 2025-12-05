@@ -38,5 +38,5 @@
 
 #components.adaptive-columns(outline(title: none, indent: 1em))
 
-#include "admin_linux.typ"
+#include "./pages/admin_linux.typ"
 

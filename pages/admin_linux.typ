@@ -3,7 +3,7 @@
 == Linux ou GNU/LINUX
 
 #figure(
-  image("./media/Linux_Logo_in_Linux_Libertine_Font.svg.png", width: 40%),
+  image("../media/Linux_Logo_in_Linux_Libertine_Font.svg.png", width: 40%),
   caption: [
     *Tux* le manchot mascotte officielle du *noyau* *Linux*
   ],
@@ -51,11 +51,11 @@ Seul *OS* à être utilisé sur les *500* *Super Ordinateurs* les plus rapides a
 - Non modifiable
 
 
-#image("./media/unix_history.svg")
+#image("../media/unix_history.svg")
 
 == Fontionnement d'une machine sous Linux
 
-#image("./media/linux_kernel_ubiquity.svg.png")
+#image("../media/linux_kernel_ubiquity.svg.png")
 
 == Distribution Linux
 
@@ -155,7 +155,7 @@ Manuel Filesystem Hierarchy
 <virtualbox>
 #link("https://www.virtualbox.org/")[https:\/\/www.virtualbox.org]
 
-#image("./media/vbox_logo2_gradient.png")
+#image("../media/vbox_logo2_gradient.png")
 
 
 
@@ -163,7 +163,7 @@ Manuel Filesystem Hierarchy
 <debian>
 #link("https://www.debian.org/releases/index.fr.html")
 
-#box(width: 81.0pt, image("./media/openlogo.svg"))
+#box(width: 81.0pt, image("../media/openlogo.svg"))
 
 #include "ssh.typ"
 
