@@ -39,4 +39,3 @@
 #components.adaptive-columns(outline(title: none, indent: 1em))
 
 #include "./pages/admin_linux.typ"
-
