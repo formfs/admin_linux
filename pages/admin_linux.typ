@@ -195,6 +195,8 @@ Installer des services,...
 
 ---
 
+Documentation sur la commande *apt* : https://www.debian.org/doc/manuals/debian-faq/pkgtools.en.html#apt-get
+
 - Installer un logiciel avec ses dépendances #strong[apt install logiciel]
 - Dés-installer un logiciel avec ses dépendances #strong[apt remove logiciel]
 - Dés-installation complète d’un logiciel avec ses fichiers de configuration #strong[apt remove --purge logiciel]
