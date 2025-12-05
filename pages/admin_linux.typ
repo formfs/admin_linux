@@ -149,23 +149,33 @@ Manuel Filesystem Hierarchy
   \(#strong[/var/lib/mysql];) et les pages de site web
   \(#strong[/var/www/html];)
 
+#include "ssh.typ"
 
 
-== Virtualbox
-<virtualbox>
+== Oracle VM VirtualBox
+
+#image("../media/VirtualBox_2024_Logo.svg.png", width: 10%)
+
 #link("https://www.virtualbox.org/")[https:\/\/www.virtualbox.org]
 
-#image("../media/vbox_logo2_gradient.png")
-
+*Oracle VM VirtualBox* (anciennement *VirtualBox*) est un logiciel libre de *virtualisation* créé par la société Innotek (en) rachetée par Sun Microsystems et aujourd'hui publié par Oracle. 
 
 
 == Debian
-<debian>
+
+#box(width: 50%, image("../media/openlogo.svg"), baseline: 40%)
+
 #link("https://www.debian.org/releases/index.fr.html")
 
-#box(width: 81.0pt, image("../media/openlogo.svg"))
+#pagebreak()
 
-#include "ssh.typ"
+*Debian* (ou *Debian GNU/Linux*) est une distribution *Linux*, composée presque exclusivement de logiciels libres.Elle est aussi utilisée en tant que base de nombreuses autres distributions, comme *Ubuntu*.
+
+*Debian* est disponible en trois versions. Ces trois versions possèdent des cycles de développement distincts (trois branches) :
+- *stable* : c'est la version mise en avant par la communauté.Une version sort tous les deux ans.Utilisé sur les *serveurs* en *production*.
+- *testing* : c'est la version en amont de la version stable.Elle offre des paquets extrêmement récents, tout en conservant une base de stabilité relative (rien de réellement bloquant).
+- *unstable* : (surnommée *Sid*, pour « Still In Development ») II s'agit de la version qui est en amont de la version *testing*, elle est en constante évolution, alimentée sans fin par des nouveaux paquets ou des mises à jour de paquets déjà existants (on parle de *rolling release*).
+
 
 == Commande pour gérer une machine à base de Debian
 <commande-pour-gérer-une-machine-à-base-de-debian>
