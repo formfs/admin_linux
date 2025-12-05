@@ -82,7 +82,7 @@ Les distributions orientées exclusivement vers l’*entreprise* avec un contrat
 
 Manuel Filesystem Hierarchy
 
-*man hier*
+`man hier`
 
 ---
 
@@ -194,6 +194,8 @@ Installer des services,...
 #strong[tasksel]
 
 ---
+
+Documentation sur la commande *apt* : https://www.debian.org/doc/manuals/debian-faq/pkgtools.en.html#apt-get
 
 - Installer un logiciel avec ses dépendances #strong[apt install logiciel]
 - Dés-installer un logiciel avec ses dépendances #strong[apt remove logiciel]
