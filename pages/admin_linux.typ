@@ -82,7 +82,7 @@ Les distributions orientées exclusivement vers l’*entreprise* avec un contrat
 
 Manuel Filesystem Hierarchy
 
-*man hier*
+`man hier`
 
 ---
 

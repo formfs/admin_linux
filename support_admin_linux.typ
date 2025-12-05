@@ -15,6 +15,16 @@
   ),
 )
 
+#set page(
+  footer: context [
+    #set align(right)
+    #set text(8pt)
+    #counter(page).display(
+      "1",
+      both: false,
+    )
+  ]  
+)
 
 #show raw.where(block: false): box.with(
   fill: luma(240),
@@ -32,7 +42,7 @@
 #set heading(numbering: numbly("{1}.", default: "1.1"))
 
 #set text(
-  font: "Hack",
+  font: "Fira Code",
   size: 16pt
 )
 
