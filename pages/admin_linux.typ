@@ -392,17 +392,23 @@ Enchaînements #strong[conditionnels] de commandes
 #link("https://en.wikipedia.org/wiki/File-system_permissions")[File-system permissions : https:\/\/en.wikipedia.org/wiki/File-system\_permissions]
 
 
-Chaque ﬁchier du système est associé à des droits d’accès. Ceux-ci sont
-affichés par la commande #strong[ls];.
+Chaque ﬁchier du système est associé à des droits d’accès. \
 
-Ces droits d’accès sont résumés en 10 caractères de la forme suivante :
+Résultat de la commande #strong[ls] :
 
-```bash
-u (user) , g (group) , o(other)
+`-rwx-rw-r-- 1 marc marc 1.2K Dec  1 11:37 fichier.txt`
 
-type u_read u_write u_exec g_read g_write g_exec o_read o_write o_exec
-```
+Ce fichier a les droits suivants :
+- pour le premier groupe de droit de *rwx* , il s'agit des droits du *propriétaire* , dans ce cas le propriétaire à les droits :
+   - de lire *r* (*read*)
+   - d'écrire *w* (*write*)
+   - d'executer *x* (*execute*)
+- pour le deuxiéme groupe de droit , il s'agit du *groupe* dans lequel se trouve le *propriétaire*
+- pour le troisieme groupe de droit , il s'agit du *reste du monde*
 
-On gère les droits sur les fichiers avec la commande #strong[chmod]
+On gère les droits sur les fichiers avec la commande #strong[chmod].
+
+
+
 
 #include "install_web_server.typ"
