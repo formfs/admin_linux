@@ -7,12 +7,54 @@
 <lemp-linux-nginx-mysqlmariadb-php>
 
 
+== Installation de php
+<installation-de-php>
+#link("https://www.php.net/")[https:\/\/www.php.net]
+
+ *PHP* (officiellement, ce sigle est un acronyme récursif pour *PHP Hypertext Preprocessor*) est un langage de scripts généraliste et Open Source, spécialement conçu pour le développement d'applications web. Il peut être intégré facilement au *HTML*. 
+
+ *PHP* est principalement conçu pour servir de *langage* de *script* coté *serveur*, il peut :
+ - collecter des données de formulaire
+ - générer du contenu dynamique
+ - gérer des cookies
+
+#pagebreak()
+
+Il y a deux domaines différents où *PHP* peut s'illustrer :
+
+- Langage de *script* côté *serveur*. C'est l'utilisation la plus traditionnelle, et aussi le principal objet de *PHP*. Trois composants sont nécessaires pour l'exploiter : 
+   - un analyseur *PHP* (CGI ou module serveur)
+   - un *serveur* *web* 
+   - un navigateur web
+- Langage de programmation en *ligne de commande*. Un *script* *PHP* peut être *exécuté* en *ligne de commande*, sans l'aide du *serveur* web et d'un navigateur. Il suffit de disposer de l'exécutable *PHP*. Cette utilisation est idéale pour les scripts qui sont exécutés régulièrement avec un *cron* sous *Unix* ou *Linux* ou un *gestionnaire de tâches* (sous *Windows*). 
+
+
+*FPM* (*FastCGI Process Manager*) est une version améliorée de *FastCGI* pour *PHP*, conçue pour gérer efficacement de lourdes charges de trafic. Il offre une gestion fine des *processus*, une configuration flexible et des outils avancés de *monitoring* et de *journalisation*, ce qui le rend particulièrement adapté aux environnements web hautes performances.
+
+#pagebreak()
+
+On installe #strong[php] : \
+`apt install php php-cli php-fpm php-mysql`
+
+On vérifie la version de #strong[php] qu’on vient d’installer : \
+`php -v`
+
+
+On verifie que le service *php-fpm* est bien lancé: \
+`systemctl status php8.xxx-fpm`
+
+
+
 
 == Installation du serveur web nginx
 <installation-du-serveur-web-nginx>
 #link("https://nginx.org/")
 
-`apt-get install nginx`
+*Nginx* est un logiciel libre de serveur *Web* (ou *HTTP*) ainsi qu'un *proxy* *inverse* écrit par Igor Sysoev, dont le développement a débuté en 2002.
+
+#pagebreak()
+
+Installation : `apt-get install nginx`
 
 On démarrage le serveur #strong[nginx] `systemctl start nginx`
 
@@ -54,11 +96,16 @@ Pour ne pas afficher les informations du serveur , editer
 <installation-du-serveur-web-apache>
 #link("https://httpd.apache.org/")[https:\/\/httpd.apache.org]
 
-`apt install apache2`
+Le logiciel libre *Apache HTTP Server* (*Apache*) est un *serveur* *HTTP* créé et maintenu au sein de la fondation *Apache*.
 
-On crée le dossier du site web
+#pagebreak()
+
+
+Installation : `apt install apache2`
+
+
+On crée le dossier du site web : \
 `mkdir /var/wwww/wwww.monsuperbesiteweb.fr`
-
 
 
 On crée une page #strong[index.html] dans ce dossier
@@ -76,11 +123,9 @@ On crée une page #strong[index.html] dans ce dossier
 </html>
 ```
 
+#pagebreak()
 
-
-Chaque site web qu’on héberge \
-aura un hôte virtuel -\>
-#link("https://httpd.apache.org/docs/current/fr/vhosts/examples.html")[VirtualHost]
+Chaque site web qu’on héberge aura un hôte virtuel #link("https://httpd.apache.org/docs/current/fr/vhosts/examples.html")[VirtualHost]
 \
 avec son fichier de configuration `wwww.monsuperbesiteweb.fr.conf`
 
@@ -117,12 +162,18 @@ Ajouter votre site au fichier `/etc/hosts` , dans Windows
 <installation-dun-serveur-de-base-de-donnée-mariadbmysql>
 #link("https://mariadb.com/")[https:\/\/mariadb.com]
 
--\>
+
 #link("https://mariadb.com/kb/en/documentation/")[MariaDB Server Documentation : https:\/\/mariadb.com/kb/en/documentation]
 
+*MariaDB* est un système de gestion de base de données *relationnelle* édité sous licence *GPL*. Il s'agit d'un dérivé (*fork*) communautaire de *MySQL*.
 
+#pagebreak()
 
-`apt install mariadb-server`
+Installation : `apt install mariadb-server`
+
+On verifie si mariadb est bien lancé : `systemctl status mariadb`
+
+Sinon le démarrarer : \
 
 `service mariadb start` ou `systemctl start mariadb`
 
@@ -156,20 +207,6 @@ Voir le #strong[schéma] d’une table `DESC DataBaseName.Table;`
 
 Lister tous les users dans #strong[mariadb]
 `SELECT user FROM mysql.user;`
-
-
-
-== Installation de php
-<installation-de-php>
-#link("https://www.php.net/")[https:\/\/www.php.net]
-
-
-
-On installe #strong[php] `apt install php php-cli php-fpm php-mysql`
-
-On vérifie la version de #strong[php] qu’on vient d’installer `php -v`
-
-`systemctl status php8.xxx-fpm`
 
 
 

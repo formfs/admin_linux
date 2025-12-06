@@ -28,14 +28,14 @@
 
 #show raw.where(block: false): box.with(
   fill: luma(240),
-  inset: (x: 3pt, y: 0pt),
+  inset: (x: 6pt, y: 3pt),
   outset: (y: 3pt),
   radius: 2pt,
 )
 
 #show raw.where(block: true): block.with(
   fill: luma(240),
-  inset: 10pt,
+  inset: 1em,
   radius: 4pt,
 )
 
