@@ -43,7 +43,7 @@
 
 #set text(
   font: "Fira Code",
-  size: 16pt
+  size: 14pt
 )
 
 #show link: it => {
@@ -63,3 +63,5 @@
 #components.adaptive-columns(outline(title: none, indent: 1em))
 
 #include "./pages/admin_linux.typ"
+
+#include "./pages/support.typ"
