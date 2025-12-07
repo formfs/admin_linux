@@ -64,4 +64,6 @@
 
 #include "./pages/admin_linux.typ"
 
+#include "./pages/install_web_server.typ"
+
 #include "./pages/support.typ"
