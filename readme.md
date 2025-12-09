@@ -1,5 +1,7 @@
 # Support 
 
-Dans ce dépôt le support pour l'administration linux d'un serveur.
+Dans le dossier **pdf** se trouve le support pour l'administration linux d'un serveur.
 
-Les fichiers sources sont en [**typst**](https://typst.app/).
+Un version au format html se trouve dans le dosser **html**.
+
+Les fichiers sources de ce support sont écrit en [**typst**](https://typst.app/).
