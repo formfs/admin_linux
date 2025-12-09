@@ -263,8 +263,7 @@ Language
 *Docker Compose* est un logiciel pour définir et exécuter des
 applications à partir de *multiples* *conteneurs*. Il est basé sur un
 fichier #strong[YAML] qui permet de définir les *services* et les
-paramètres de leurs créations et ainsi de les démarrer par une commande
-unique.]
+paramètres de leurs créations et ainsi de les démarrer par une commande unique.
 #link("https://fr.wikipedia.org/wiki/Docker_(logiciel)#Outils_associ%C3%A9s")[Source Wikipédia]
 
 Il existe deux implémentations de #strong[Docker Compose] :
