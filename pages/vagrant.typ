@@ -2,65 +2,74 @@
 
 == Création de VMs
 
-*Vagrant* est un logiciel anciennement libre et open-source pour la *création* et la *configuration* des environnements de développement virtuels.
+*Vagrant* est un logiciel anciennement libre et open-source pour la *création* et la *configuration* des environnements de développement *virtuels*. \
+*Vagrant* peut utiliser des *hyperviseurs* tel que *Virtualbox* , *VMWare*  , *Hyper-V* , *KVM*.
 
-```bash
-vagrant init [nom-de-boîte]
- Initialise un nouvel environnement Vagrant en créant un Vagrantfile
+== Commandes de Base
 
-vagrant up
- Démarre et provisionne l'environnement Vagrant
+Assurez-vous de travailler dans un répertoire de projet contenant un Vagrantfile, pas dans le répertoire racine.
 
-vagrant halt
- Arrête l'environnement Vagrant en cours d'exécution
+Initialise un nouvel environnement Vagrant en créant un Vagrantfile
+`vagrant init [nom-de-boîte]`
 
-vagrant reload
- Redémarre l'environnement Vagrant
+Démarre et provisionne l'environnement Vagrant
+`vagrant up`
 
-vagrant destroy
- Détruit l'environnement Vagrant
+Arrête l'environnement Vagrant en cours d'exécution
+`vagrant halt`
 
-vagrant ssh
- Se connecte à l'environnement Vagrant via SSH
+Redémarre l'environnement Vagrant
+`vagrant reload`
 
-vagrant status
- Affiche le statut de l'environnement Vagrant
-```
+Détruit l'environnement Vagrant
+`vagrant destroy`
+
+Se connecte à l'environnement Vagrant via SSH
+`vagrant ssh`
+
+Affiche le statut de l'environnement Vagrant
+`vagrant status`
 
 == Configuration
 
+Le fichier de configuration pour un environnement Vagrant
+`Vagrantfile`
+
+Spécifie la boîte de base pour l'environnement Vagrant
+`configvmbox = "nom-de-boîte"`
+
+Configure un réseau privé pour l'environnement Vagrant
+`configvmnetwork "private_network", ip: "1921683310"`
+
+Configure un dossier synchronisé entre l'hôte et l'environnement Vagrant
+`configvmsynced_folder "src/", "/srv/website"`
+
+Configure les paramètres spécifiques au fournisseur pour l'environnement Vagrant \
 ```bash
-Vagrantfile
- Le fichier de configuration pour un environnement Vagrant
-
-configvmbox = "nom-de-boîte"
- Spécifie la boîte de base pour l'environnement Vagrant
-
-configvmnetwork "private_network", ip: "1921683310"
- Configure un réseau privé pour l'environnement Vagrant
-
-configvmsynced_folder "src/", "/srv/website"
- Configure un dossier synchronisé entre l'hôte et l'environnement Vagrant
-
 configvmprovider "virtualbox" do |vb|
- vbmemory = "1024"
- vbcpus = 2
+vbmemory = "1024"
+vbcpus = 2
 end
- Configure les paramètres spécifiques au fournisseur pour l'environnement Vagrant
-```
+``` \
 
 == Dépannage
 
-```bash
-vagrant global-status
- Liste tous les environnements Vagrant gérés par l'utilisateur actuel
+Liste tous les environnements Vagrant gérés par l'utilisateur actuel
+`vagrant global-status`
 
-vagrant global-status --prune
- Supprime les entrées du statut global qui ne sont plus valides
+Supprime les entrées du statut global qui ne sont plus valides
+`vagrant global-status --prune`
 
-vagrant box list
- Liste toutes les boîtes Vagrant disponibles
+Liste toutes les boîtes Vagrant disponibles
+`vagrant box list`
 
-vagrant box remove [nom-de-boîte]
- Supprime une boîte Vagrant
-```
+Supprime une boîte Vagrant
+`vagrant box remove [nom-de-boîte]`
+
+== Résolution de Problèmes Avancés
+
+`vagrant --debug`
+L'exécution de `vagrant --debug` seul ne fournira pas de sortie utile. 
+Vous devez spécifier une commande, comme `vagrant up --debug`, 
+pour obtenir des informations de débogage détaillées
+
