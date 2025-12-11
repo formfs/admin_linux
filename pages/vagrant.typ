@@ -9,25 +9,25 @@
 
 Assurez-vous de travailler dans un répertoire de projet contenant un *Vagrantfile*, pas dans le répertoire racine.
 
-Initialise un nouvel environnement *Vagrant* en créant un *Vagrantfile*
+Initialiser un nouvel environnement *Vagrant* en créant un *Vagrantfile*
 `vagrant init [nom-de-boîte]`
 
-Démarre et provisionne l'environnement *Vagrant*
+Démarrer et provisionner l'environnement *Vagrant*
 `vagrant up`
 
-Arrête l'environnement *Vagrant* en cours d'exécution
+Arrêter l'environnement *Vagrant* en cours d'exécution
 `vagrant halt`
 
-Redémarre l'environnement *Vagrant*
+Redémarrer l'environnement *Vagrant*
 `vagrant reload`
 
-Détruit l'environnement *Vagrant*
+Détruire l'environnement *Vagrant*
 `vagrant destroy`
 
-Se connecte à l'environnement *Vagrant* via *SSH*
+Se connecter à l'environnement *Vagrant* via *SSH*
 `vagrant ssh`
 
-Affiche le statut de l'environnement *Vagrant*
+Afficher le statut de l'environnement *Vagrant*
 `vagrant status`
 
 == Configuration
