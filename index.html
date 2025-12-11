@@ -56,59 +56,61 @@
           <div><a href="#loc-16">Vagrant</a></div>
           <ol style="list-style-type: none">
             <li><a href="#loc-17">Création de VMs</a></li>
-            <li><a href="#loc-18">Configuration</a></li>
-            <li><a href="#loc-19">Dépannage</a></li>
+            <li><a href="#loc-18">Commandes de Base</a></li>
+            <li><a href="#loc-19">Configuration</a></li>
+            <li><a href="#loc-20">Dépannage</a></li>
+            <li><a href="#loc-21">Résolution de Problèmes Avancés</a></li>
           </ol>
         </li>
         <li>
-          <div><a href="#loc-20">Parefeu (Firewall)</a></div>
+          <div><a href="#loc-22">Parefeu (Firewall)</a></div>
           <ol style="list-style-type: none">
-            <li><a href="#loc-21">UFW (UncomplicatedFirewall)</a></li>
+            <li><a href="#loc-23">UFW (UncomplicatedFirewall)</a></li>
           </ol>
         </li>
         <li>
-          <div><a href="#loc-22">Securiser son serveur</a></div>
+          <div><a href="#loc-24">Securiser son serveur</a></div>
           <ol style="list-style-type: none">
-            <li><a href="#loc-23">Debian</a></li>
-            <li><a href="#loc-24">Simulation de charge du serveur</a></li>
+            <li><a href="#loc-25">Debian</a></li>
+            <li><a href="#loc-26">Simulation de charge du serveur</a></li>
           </ol>
         </li>
         <li>
-          <div><a href="#loc-25">Ressources</a></div>
+          <div><a href="#loc-27">Ressources</a></div>
           <ol style="list-style-type: none">
-            <li><a href="#loc-26">Sécurité informatique</a></li>
+            <li><a href="#loc-28">Sécurité informatique</a></li>
           </ol>
         </li>
         <li>
-          <div><a href="#loc-27">Docker</a></div>
+          <div><a href="#loc-29">Docker</a></div>
           <ol style="list-style-type: none">
-            <li><a href="#loc-28">La conténeurisation d’applications</a></li>
+            <li><a href="#loc-30">La conténeurisation d’applications</a></li>
           </ol>
         </li>
         <li>
-          <div><a href="#loc-29">Docker Conteneur</a></div>
+          <div><a href="#loc-31">Docker Conteneur</a></div>
           <ol style="list-style-type: none">
-            <li><a href="#loc-30">Container</a></li>
+            <li><a href="#loc-32">Container</a></li>
           </ol>
         </li>
         <li>
-          <div><a href="#loc-31">Docker CLI</a></div>
+          <div><a href="#loc-33">Docker CLI</a></div>
           <ol style="list-style-type: none">
-            <li><a href="#loc-32">Commande cli docker</a></li>
+            <li><a href="#loc-34">Commande cli docker</a></li>
           </ol>
         </li>
         <li>
-          <div><a href="#loc-33">YAML</a></div>
+          <div><a href="#loc-35">YAML</a></div>
           <ol style="list-style-type: none">
-            <li><a href="#loc-34">Yaml format de présentation de données</a></li>
+            <li><a href="#loc-36">Yaml format de présentation de données</a></li>
           </ol>
         </li>
         <li>
-          <div><a href="#loc-35">Docker compose</a></div>
+          <div><a href="#loc-37">Docker compose</a></div>
           <ol style="list-style-type: none">
-            <li><a href="#loc-36">Docker compose</a></li>
+            <li><a href="#loc-38">Docker compose</a></li>
             <li><a href="#_docker_compose_cli">Docker Compose CLI</a></li>
-            <li><a href="#loc-37">Sources</a></li>
+            <li><a href="#loc-39">Sources</a></li>
           </ol>
         </li>
       </ol>
@@ -556,14 +558,33 @@
     <p>Lister les derniers boot : <code>journalctl --list-boots</code> <code>journalctl -u ssh.service --since "1 week ago" | grep -E "(shutdown|reboot)"</code> <code>grep -E "(shutdown|reboot)" /var/log/auth.log</code></p>
     <h2 id="loc-16">Vagrant</h2>
     <h3 id="loc-17">Création de VMs</h3>
-    <p><strong>Vagrant</strong> est un logiciel anciennement libre et open-source pour la <strong>création</strong> et la <strong>configuration</strong> des environnements de développement virtuels.</p>
-    <pre><code data-lang="bash"><span style="color: #4b69c6">vagrant</span> init <span style="color: #d73948">[</span>nom<span style="color: #d73948">-</span>de<span style="color: #d73948">-</span>boîte<span style="color: #d73948">]</span><br> <span style="color: #4b69c6">Initialise</span> un nouvel environnement Vagrant en créant un Vagrantfile<br><br><span style="color: #4b69c6">vagrant</span> up<br> <span style="color: #4b69c6">Démarre</span> et provisionne l<span style="color: #198810">'</span><span style="color: #198810">environnement Vagrant</span><br><br><span style="color: #198810">vagrant halt</span><br><span style="color: #198810"> Arrête l</span><span style="color: #198810">'</span>environnement Vagrant en cours d<span style="color: #198810">'</span><span style="color: #198810">exécution</span><br><br><span style="color: #198810">vagrant reload</span><br><span style="color: #198810"> Redémarre l</span><span style="color: #198810">'</span>environnement Vagrant<br><br><span style="color: #4b69c6">vagrant</span> destroy<br> <span style="color: #4b69c6">Détruit</span> l<span style="color: #198810">'</span><span style="color: #198810">environnement Vagrant</span><br><br><span style="color: #198810">vagrant ssh</span><br><span style="color: #198810"> Se connecte à l</span><span style="color: #198810">'</span>environnement Vagrant via SSH<br><br><span style="color: #4b69c6">vagrant</span> status<br> <span style="color: #4b69c6">Affiche</span> le statut de l<span style="color: #198810">'</span><span style="color: #198810">environnement Vagrant</span></code></pre>
-    <h3 id="loc-18">Configuration</h3>
-    <pre><code data-lang="bash"><span style="color: #4b69c6">Vagrantfile</span><br> <span style="color: #4b69c6">Le</span> fichier de configuration pour un environnement Vagrant<br><br><span style="color: #4b69c6">configvmbox</span> = <span style="color: #198810">"</span><span style="color: #198810">nom-de-boîte</span><span style="color: #198810">"</span><br> <span style="color: #4b69c6">Spécifie</span> la boîte de base pour l<span style="color: #198810">'</span><span style="color: #198810">environnement Vagrant</span><br><br><span style="color: #198810">configvmnetwork "private_network", ip: "1921683310"</span><br><span style="color: #198810"> Configure un réseau privé pour l</span><span style="color: #198810">'</span>environnement Vagrant<br><br><span style="color: #4b69c6">configvmsynced_folder</span> <span style="color: #198810">"</span><span style="color: #198810">src/</span><span style="color: #198810">"</span>, <span style="color: #198810">"</span><span style="color: #198810">/srv/website</span><span style="color: #198810">"</span><br> <span style="color: #4b69c6">Configure</span> un dossier synchronisé entre l<span style="color: #198810">'</span><span style="color: #198810">hôte et l</span><span style="color: #198810">'</span>environnement Vagrant<br><br><span style="color: #4b69c6">configvmprovider</span> <span style="color: #198810">"</span><span style="color: #198810">virtualbox</span><span style="color: #198810">"</span> do <span style="color: #d73948">|</span><span style="color: #4b69c6">vb</span><span style="color: #d73948">|</span><br> <span style="color: #4b69c6">vbmemory</span> = <span style="color: #198810">"</span><span style="color: #198810">1024</span><span style="color: #198810">"</span><br> <span style="color: #4b69c6">vbcpus</span> = 2<br><span style="color: #4b69c6">end</span><br> <span style="color: #4b69c6">Configure</span> les paramètres spécifiques au fournisseur pour l<span style="color: #198810">'</span><span style="color: #198810">environnement Vagrant</span></code></pre>
-    <h3 id="loc-19">Dépannage</h3>
-    <pre><code data-lang="bash"><span style="color: #4b69c6">vagrant</span> global-status<br> <span style="color: #4b69c6">Liste</span> tous les environnements Vagrant gérés par l<span style="color: #198810">'</span><span style="color: #198810">utilisateur actuel</span><br><br><span style="color: #198810">vagrant global-status --prune</span><br><span style="color: #198810"> Supprime les entrées du statut global qui ne sont plus valides</span><br><br><span style="color: #198810">vagrant box list</span><br><span style="color: #198810"> Liste toutes les boîtes Vagrant disponibles</span><br><br><span style="color: #198810">vagrant box remove [nom-de-boîte]</span><br><span style="color: #198810"> Supprime une boîte Vagrant</span></code></pre>
-    <h2 id="loc-20">Parefeu (Firewall)</h2>
-    <h3 id="loc-21">UFW (UncomplicatedFirewall)</h3>
+    <p><strong>Vagrant</strong> est un logiciel anciennement libre et open-source pour la <strong>création</strong> et la <strong>configuration</strong> des environnements de développement <strong>virtuels</strong>.<br><strong>Vagrant</strong> peut utiliser des <strong>hyperviseurs</strong> tel que <strong>Virtualbox</strong> , <strong>VMWare</strong> , <strong>Hyper-V</strong> , <strong>KVM</strong>.</p>
+    <h3 id="loc-18">Commandes de Base</h3>
+    <p>Assurez-vous de travailler dans un répertoire de projet contenant un <strong>Vagrantfile</strong>, pas dans le répertoire racine.</p>
+    <p>Initialiser un nouvel environnement <strong>Vagrant</strong> en créant un <strong>Vagrantfile</strong> <code>vagrant init [nom-de-boîte]</code></p>
+    <p>Démarrer et provisionner l’environnement <strong>Vagrant</strong> <code>vagrant up</code></p>
+    <p>Arrêter l’environnement <strong>Vagrant</strong> en cours d’exécution <code>vagrant halt</code></p>
+    <p>Redémarrer l’environnement <strong>Vagrant</strong> <code>vagrant reload</code></p>
+    <p>Détruire l’environnement <strong>Vagrant</strong> <code>vagrant destroy</code></p>
+    <p>Se connecter à l’environnement <strong>Vagrant</strong> via <strong>SSH</strong> <code>vagrant ssh</code></p>
+    <p>Afficher le statut de l’environnement <strong>Vagrant</strong> <code>vagrant status</code></p>
+    <h3 id="loc-19">Configuration</h3>
+    <p>Le fichier de configuration pour un environnement <strong>Vagrant</strong> <code>Vagrantfile</code></p>
+    <p>Spécifie la boîte de base pour l’environnement <strong>Vagrant</strong> <code>config.vm.box = "nom-de-boîte"</code></p>
+    <p>Configure un réseau privé pour l’environnement <strong>Vagrant</strong> <code>config.vm.network "private_network", ip: "1921683310"</code></p>
+    <p>Configure un dossier synchronisé entre l’hôte et l’environnement <strong>Vagrant</strong> <code>config.vm.synced_folder "src/", "/srv/website"</code></p>
+    <p>Configure les paramètres spécifiques au fournisseur pour l’environnement <strong>Vagrant</strong><br></p>
+    <pre><code data-lang="bash"><span style="color: #4b69c6">config.vm.provider</span> <span style="color: #198810">"</span><span style="color: #198810">virtualbox</span><span style="color: #198810">"</span> do <span style="color: #d73948">|</span><span style="color: #4b69c6">vb</span><span style="color: #d73948">|</span> <span style="color: #74747c">#</span><span style="color: #74747c">vb est un alias </span><br><span style="color: #4b69c6">vb.memory</span> = <span style="color: #198810">"</span><span style="color: #198810">1024</span><span style="color: #198810">"</span><br><span style="color: #4b69c6">vb.cpus</span> = 2<br><span style="color: #4b69c6">end</span></code></pre>
+    <p><br></p>
+    <h3 id="loc-20">Dépannage</h3>
+    <p>Liste tous les environnements <strong>Vagrant</strong> gérés par l’utilisateur actuel <code>vagrant global-status</code></p>
+    <p>Supprime les entrées du statut global qui ne sont plus valides <code>vagrant global-status --prune</code></p>
+    <p>Liste toutes les boîtes <strong>Vagrant</strong> disponibles <code>vagrant box list</code></p>
+    <p>Supprime une boîte <strong>Vagrant</strong> <code>vagrant box remove [nom-de-boîte]</code></p>
+    <h3 id="loc-21">Résolution de Problèmes Avancés</h3>
+    <p><code>vagrant --debug</code> L’exécution de <code>vagrant --debug</code> seul ne fournira pas de sortie utile. Vous devez spécifier une commande, comme <code>vagrant up --debug</code>, pour obtenir des informations de débogage détaillées.</p>
+    <h2 id="loc-22">Parefeu (Firewall)</h2>
+    <h3 id="loc-23">UFW (UncomplicatedFirewall)</h3>
     <p><a href="https://help.ubuntu.com/community/UFW">https://help.ubuntu.com/community/UFW</a></p>
     <p>Le noyau <strong>Linux</strong> fournit un système de filtrage de paquets appelé <strong>netfilter</strong>, et l’interface traditionnelle pour manipuler <strong>netfilter</strong> est la suite de commandes <strong>iptables</strong>. <strong>iptables</strong> offre une solution de <strong>pare-feu</strong> complète, à la fois hautement configurable et très flexible.</p>
     <ul>
@@ -583,15 +604,15 @@
       <li>Bloque le trafic sur un port spécifique : <code>sudo ufw deny 25</code> (<strong>SMTP</strong>)</li>
       <li><strong>ufw</strong> a la possibilité de refuser les connexions à partir d’une adresse IP qui a tenté d’initier 6 connexions ou plus au cours des 30 dernières secondes : <code>sudo ufw limit ssh</code></li>
     </ul>
-    <h2 id="loc-22">Securiser son serveur</h2>
-    <h3 id="loc-23">Debian</h3>
+    <h2 id="loc-24">Securiser son serveur</h2>
+    <h3 id="loc-25">Debian</h3>
     <p><strong>Automatiser</strong> l’installation des <strong>mises à jour</strong> de <strong>sécurité</strong> :<br><code>sudo apt-get install unattended-upgrades apt-listchanges</code></p>
     <p>Valider par <strong>yes</strong> l’installation <strong>automatique</strong> des <strong>mises à jour</strong> :<br><code>sudo dpkg-reconfigure --priority=low unattended-upgrades</code></p>
-    <h3 id="loc-24">Simulation de charge du serveur</h3>
+    <h3 id="loc-26">Simulation de charge du serveur</h3>
     <p>Installer <strong>siege</strong> sur une machine <strong>hôte</strong> :<br><code>sudo apt-get install siege</code></p>
     <p>Simuler <strong>200 utilisateurs virtuels</strong> pendant <strong>1 minute</strong> vers le site web <strong>cible</strong> :<br><code>siege -c 200 -t 1M http://votre-serveur-nginx.com</code></p>
-    <h2 id="loc-25">Ressources</h2>
-    <h3 id="loc-26">Sécurité informatique</h3>
+    <h2 id="loc-27">Ressources</h2>
+    <h3 id="loc-28">Sécurité informatique</h3>
     <ul>
       <li>
         <p><a href="https://secnumacademie.gouv.fr/">SecNumAcadémie, la formation en ligne sur la sécurité informatique gratuite et ouverte à tous : https://secnumacademie.gouv.fr</a></p>
@@ -600,8 +621,8 @@
         <p><a href="https://www.ssi.gouv.fr/administration/bonnes-pratiques/">Les bonnes pratiques de sécurité informatique : https://www.ssi.gouv.fr/administration/bonnes-pratiques</a></p>
       </li>
     </ul>
-    <h2 id="loc-27">Docker</h2>
-    <h3 id="loc-28">La conténeurisation d’applications</h3>
+    <h2 id="loc-29">Docker</h2>
+    <h3 id="loc-30">La conténeurisation d’applications</h3>
     <img src="data:image/png;base64,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">
     <p>Site officiel : <a href="https://www.docker.com/">https://www.docker.com/</a></p>
     <p><strong>Docker</strong> est une plateforme permettant de lancer certaines applications dans des conteneurs logiciels.</p>
@@ -650,8 +671,8 @@
     <p>On lance une <strong>image</strong> de test</p>
     <pre><code>docker run hello-world</code></pre>
     <p>Cette commande télécharge une <strong>image</strong> de test et l’exécute dans un <strong>conteneur</strong>. Lorsque le <strong>conteneur</strong> s’<strong>exécute</strong>, il <strong>affiche</strong> un message et <strong>quitte</strong>.<br><a href="https://docs.docker.com/get-started/overview/">Source Docker</a></p>
-    <h2 id="loc-29">Docker Conteneur</h2>
-    <h3 id="loc-30">Container</h3>
+    <h2 id="loc-31">Docker Conteneur</h2>
+    <h3 id="loc-32">Container</h3>
     <p><em>Un grand avantage de <strong>Docker</strong> est la possibilité de modéliser chaque <strong>conteneur</strong> sous la forme d’une <strong>image</strong> que l’on peut stocker localement ou sur le <strong>Docker Hub</strong>, endroit public où de nombreuses images sont publiées et mises à jour régulièrement.</em> <a href="https://fr.wikipedia.org/wiki/Docker_(logiciel)#Histoire">Wikipédia</a></p>
     <p>Registre de <strong>conteneur</strong> <a href="https://dockerhub.com">dockerhub</a></p>
     <p><em>L’objectif d’un <strong>conteneur</strong> est le même que pour un serveur dédié virtuel : héberger des services sur un même serveur physique tout en les isolant les uns des autres. Un conteneur est cependant moins figé qu’une machine virtuelle en matière de taille de disque et de ressources allouées.</em> <a href="https://fr.wikipedia.org/wiki/Docker_(logiciel)#La_notion_de_conteneur">Wikipédia</a></p>
@@ -662,8 +683,8 @@
       <li>Personnalisation (Customization)</li>
       <li>Base OS(Linux)</li>
     </ul>
-    <h2 id="loc-31">Docker CLI</h2>
-    <h3 id="loc-32">Commande cli docker</h3>
+    <h2 id="loc-33">Docker CLI</h2>
+    <h3 id="loc-34">Commande cli docker</h3>
     <p><a href="https://docs.docker.com/get-started/docker_cheatsheet.pdf">Docker cheatsheet</a></p>
     <p>Démarrer le démon <strong>Docker</strong> <code>docker -d</code></p>
     <p>Information sur la version de <strong>Docker</strong> installé <code>docker version</code></p>
@@ -702,13 +723,13 @@
     <p>Information sur un <strong>volume</strong> <code>docker volume inspect &lt;nom du volume></code></p>
     <p>Supprimer un <strong>volume</strong> <code>docker volume rm &lt;nom du volume></code></p>
     <p>Supprimer tous les <strong>volumes</strong> non montés <code>docker volume prune</code></p>
-    <h2 id="loc-33">YAML</h2>
-    <h3 id="loc-34">Yaml format de présentation de données</h3>
+    <h2 id="loc-35">YAML</h2>
+    <h3 id="loc-36">Yaml format de présentation de données</h3>
     <p><a href="https://fr.wikipedia.org/wiki/YAML">YAML</a> : Ain’t Markup Language</p>
     <p><strong>YAML</strong> est un format de représentation de données. <a href="https://fr.wikipedia.org/wiki/YAML#Caract%C3%A9ristiques">Wikipédia</a></p>
     <p><a href="http://www.yamllint.com/">YAML Lint</a></p>
-    <h2 id="loc-35">Docker compose</h2>
-    <h3 id="loc-36">Docker compose</h3>
+    <h2 id="loc-37">Docker compose</h2>
+    <h3 id="loc-38">Docker compose</h3>
     <p><a href="https://docs.docker.com/compose/">Docker Compose</a> <strong>Docker Compose</strong> est un logiciel pour définir et exécuter des applications à partir de <strong>multiples</strong> <strong>conteneurs</strong>. Il est basé sur un fichier <strong>YAML</strong> qui permet de définir les <strong>services</strong> et les paramètres de leurs créations et ainsi de les démarrer par une commande unique. <a href="https://fr.wikipedia.org/wiki/Docker_(logiciel)#Outils_associ%C3%A9s">Source Wikipédia</a></p>
     <p>Il existe deux implémentations de <strong>Docker Compose</strong> :</p>
     <ul>
@@ -733,7 +754,7 @@
     <p>Lancer une commnade dans un <strong>conteneur</strong> <code>docker compose exec &lt;conteneur> bash</code></p>
     <p>Lancer une instance en tant que projet <code>docker compose --project-name test1 up -d</code> <code>docker compose -p test2 up -d</code></p>
     <p>Lister tous les projets actifs <code>docker compose ls</code></p>
-    <h3 id="loc-37">Sources</h3>
+    <h3 id="loc-39">Sources</h3>
     <p>Les références et textes de ce support viennent de différentes sources :</p>
     <ul>
       <li><a href="https://www.wikipedia.fr">https://www.wikipedia.fr</a></li>
