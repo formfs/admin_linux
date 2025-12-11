@@ -7,69 +7,66 @@
 
 == Commandes de Base
 
-Assurez-vous de travailler dans un répertoire de projet contenant un Vagrantfile, pas dans le répertoire racine.
+Assurez-vous de travailler dans un répertoire de projet contenant un *Vagrantfile*, pas dans le répertoire racine.
 
-Initialise un nouvel environnement Vagrant en créant un Vagrantfile
+Initialise un nouvel environnement *Vagrant* en créant un *Vagrantfile*
 `vagrant init [nom-de-boîte]`
 
-Démarre et provisionne l'environnement Vagrant
+Démarre et provisionne l'environnement *Vagrant*
 `vagrant up`
 
-Arrête l'environnement Vagrant en cours d'exécution
+Arrête l'environnement *Vagrant* en cours d'exécution
 `vagrant halt`
 
-Redémarre l'environnement Vagrant
+Redémarre l'environnement *Vagrant*
 `vagrant reload`
 
-Détruit l'environnement Vagrant
+Détruit l'environnement *Vagrant*
 `vagrant destroy`
 
-Se connecte à l'environnement Vagrant via SSH
+Se connecte à l'environnement *Vagrant* via *SSH*
 `vagrant ssh`
 
-Affiche le statut de l'environnement Vagrant
+Affiche le statut de l'environnement *Vagrant*
 `vagrant status`
 
 == Configuration
 
-Le fichier de configuration pour un environnement Vagrant
+Le fichier de configuration pour un environnement *Vagrant*
 `Vagrantfile`
 
-Spécifie la boîte de base pour l'environnement Vagrant
-`configvmbox = "nom-de-boîte"`
+Spécifie la boîte de base pour l'environnement *Vagrant*
+`config.vm.box = "nom-de-boîte"`
 
-Configure un réseau privé pour l'environnement Vagrant
-`configvmnetwork "private_network", ip: "1921683310"`
+Configure un réseau privé pour l'environnement *Vagrant*
+`config.vm.network "private_network", ip: "1921683310"`
 
-Configure un dossier synchronisé entre l'hôte et l'environnement Vagrant
-`configvmsynced_folder "src/", "/srv/website"`
+Configure un dossier synchronisé entre l'hôte et l'environnement *Vagrant*
+`config.vm.synced_folder "src/", "/srv/website"`
 
-Configure les paramètres spécifiques au fournisseur pour l'environnement Vagrant \
+Configure les paramètres spécifiques au fournisseur pour l'environnement *Vagrant* \
 ```bash
-configvmprovider "virtualbox" do |vb|
-vbmemory = "1024"
-vbcpus = 2
+config.vm.provider "virtualbox" do |vb| #vb est un alias 
+vb.memory = "1024"
+vb.cpus = 2
 end
 ``` \
 
 == Dépannage
 
-Liste tous les environnements Vagrant gérés par l'utilisateur actuel
+Liste tous les environnements *Vagrant* gérés par l'utilisateur actuel
 `vagrant global-status`
 
 Supprime les entrées du statut global qui ne sont plus valides
 `vagrant global-status --prune`
 
-Liste toutes les boîtes Vagrant disponibles
+Liste toutes les boîtes *Vagrant* disponibles
 `vagrant box list`
 
-Supprime une boîte Vagrant
+Supprime une boîte *Vagrant*
 `vagrant box remove [nom-de-boîte]`
 
 == Résolution de Problèmes Avancés
 
 `vagrant --debug`
-L'exécution de `vagrant --debug` seul ne fournira pas de sortie utile. 
-Vous devez spécifier une commande, comme `vagrant up --debug`, 
-pour obtenir des informations de débogage détaillées
-
+L'exécution de `vagrant --debug` seul ne fournira pas de sortie utile. Vous devez spécifier une commande, comme `vagrant up --debug`, pour obtenir des informations de débogage détaillées.
