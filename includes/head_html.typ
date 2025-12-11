@@ -16,6 +16,7 @@
   size: 14pt
 )
 
+
 #show link: it => {
   set text(blue)
   if type(it.dest) != str {
