@@ -1,5 +1,5 @@
 == SSH Connexion
-
+<ssh_connexion>>
 *Secure Shell* (*SSH*) est un protocole de *communication* sécurisé. Le protocole de connexion impose un échange de *clés de chiffrement* en début de connexion. Par la suite, tous les segments TCP sont authentifiés et chiffrés. Il devient donc impossible d'utiliser un analyseur de paquets (sniffer) pour voir ce que fait l'utilisateur.
 
 #pagebreak()
