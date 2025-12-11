@@ -1,8 +1,6 @@
 = Installation d’un serveur web local
 <installation-dun-serveur-web-local>
 
-
-
 == LEMP : Linux Nginx MySQL/MariaDB PHP
 <lemp-linux-nginx-mysqlmariadb-php>
 
