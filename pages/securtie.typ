@@ -2,7 +2,7 @@
 
 == Debian
 
-*Sécuriser* la connexion à son serveur avec *ssh* (voir @ssh_connexion[section])
+*Sécuriser* la connexion à son serveur avec *ssh* (voir @ssh_connexion)
 
 *Automatiser* l'installation des *mises à jour* de *sécurité* : \
 `sudo apt-get install unattended-upgrades apt-listchanges`
